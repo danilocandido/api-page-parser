@@ -8,6 +8,8 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'jsonapi-resources'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
