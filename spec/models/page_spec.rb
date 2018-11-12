@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Page, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'factories' do
+    it { expect(build(:page)).to be_valid }
+  end
+
+  context 'invalid content page' do
+    it { expect(build(:page, content: nil)).not_to be_valid }
+  end
 end
