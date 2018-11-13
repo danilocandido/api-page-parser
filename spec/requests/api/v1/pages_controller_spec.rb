@@ -11,11 +11,12 @@ RSpec.describe Api::V1::PagesController, type: :request do
   end
 
   describe 'POST #create' do
-    let(:headers) { { 'Content-Type': 'application/vnd.api+json' } }
+    let(:headers) { { 'Content-Type': 'application/vnd.api+json',
+                      'Accept': 'application/vnd.api+json'
+                  }}
 
     it 'return content tags' do
-      params = {
-        data: {
+      data = { data: {
           type: 'pages',
           attributes: {
             content: {
@@ -25,8 +26,9 @@ RSpec.describe Api::V1::PagesController, type: :request do
         }
       }
 
-      post api_v1_pages_path, params: params, headers: headers
-      expect(response.status).to eq(200)
+      post api_v1_pages_path, params: data, as: :json, headers: headers
+
+      expect(response.status).to eq(201)
     end
   end
 end
