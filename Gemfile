@@ -10,8 +10,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'rack-cors'
 gem 'jsonapi-resources'
-gem 'jsonapi-utils', '~> 0.7.2'
-
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'

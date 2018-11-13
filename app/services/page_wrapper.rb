@@ -7,9 +7,6 @@ class PageWrapper
 
   def initialize(url)
     @url = url
-  end
-
-  def call
     spread_content_into_json
   end
 
