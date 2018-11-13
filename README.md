@@ -54,3 +54,15 @@ Page with atribute 'content' (JSONB)
 
 ## TDD
 I use TDD to create my specs controllers, models and services
+
+## API Documentation
+There is a folder named doc that contains the api documentation.
+You can open the index.html page in your browser to seet the complete documentation
+
+> ./doc/api/index.html
+
+### to generate the documentation I used 'rspec_api_documentation' gem  
+create the spec/acceptance specs
+
+Finaly I run the command below.
+> rake docs:generate

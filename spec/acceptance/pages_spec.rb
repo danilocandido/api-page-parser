@@ -19,7 +19,10 @@ resource 'Users' do
   end
 
   route '/api/v1/pages/', 'Create a Page' do
-    attribute :username, 'Nome do usuário', require: true
+    attribute :data, "the document's primary data", require: true
+    attribute :type, 'the model type', require: true
+    attribute :attributes, 'the model attributes', require: true
+    attribute :content, 'the url of the page', require: true
 
     data = { data: {
         type: 'pages',
