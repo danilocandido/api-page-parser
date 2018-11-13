@@ -19,9 +19,7 @@ RSpec.describe Api::V1::PagesController, type: :request do
       data = { data: {
           type: 'pages',
           attributes: {
-            content: {
-              h1: 'http://en.wikipedia.org/'
-            }
+            content: 'http://en.wikipedia.org/'
           }
         }
       }
@@ -29,6 +27,8 @@ RSpec.describe Api::V1::PagesController, type: :request do
       post api_v1_pages_path, params: data, as: :json, headers: headers
 
       expect(response.status).to eq(201)
+      json = JSON.parse response.body
+      expect(json['data']['attributes']['content']['h1']).to eq 'Main Page'
     end
   end
 end
