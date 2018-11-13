@@ -26,7 +26,8 @@ POST localhost:3000/api/v1/pages
     Content-Type: application/vnd.api+json
     Accept: application/vnd.api+json
 
-  body
+  body  
+  ```
     {
       "data": {
         "type": "pages",
@@ -35,6 +36,7 @@ POST localhost:3000/api/v1/pages
         }
       }
     }
+  ```
 
 ## Routes
 > GET   /api/v1/pages(.:format)  api/v1/pages#index
